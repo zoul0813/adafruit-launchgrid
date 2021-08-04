@@ -1,4 +1,9 @@
-# Library Requirements
+# Adafruit MIDI Launchgrid
+
+This project creates an 8x8 MIDI Launch Grid with a 3x4 Key Grid, OLED 
+Display, Faders and an Endless Encoder.
+
+## Library Requirements
 
 Install the following libraries in your `/lib` folder
 
@@ -19,7 +24,7 @@ neopixel.mpy
 simpleio.mpy
 ```
 
-# Parts List
+## Parts List
 
 * [Adafruit MacroPad](https://www.adafruit.com/product/5100)
 * [Adafruit NeoTrellis](https://www.adafruit.com/product/3954) x 4 
@@ -29,3 +34,6 @@ simpleio.mpy
 This project uses the "kits" provided for the MacroPad and NeoTrellis, which
 includes additional parts such knobs, silocone buttons, keycaps, mechanical 
 keys, and various other small parts.
+
+
+** This project is not affiliated with or endorsed by [Adafruit](https://www.adafruit.com) **
