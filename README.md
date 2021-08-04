@@ -18,3 +18,10 @@ adafruit_simplemath.mpy
 neopixel.mpy
 simpleio.mpy
 ```
+
+# Parts List
+
+* (Adafruit MacroPad)[https://www.adafruit.com/product/5100]
+* (Adafruit NeoTrellis x 4)[https://www.adafruit.com/product/3954]
+* (Adafruit PCF8591)[https://www.adafruit.com/product/4648]
+* (Slide Potentiometer)[https://www.adafruit.com/product/4219]
