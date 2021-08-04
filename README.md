@@ -25,3 +25,7 @@ simpleio.mpy
 * [Adafruit NeoTrellis](https://www.adafruit.com/product/3954) x 4 
 * [Adafruit PCF8591](https://www.adafruit.com/product/4648)
 * [Slide Potentiometer](https://www.adafruit.com/product/4219)
+
+This project uses the "kits" provided for the MacroPad and NeoTrellis, which
+includes additional parts such knobs, silocone buttons, keycaps, mechanical 
+keys, and various other small parts.
