@@ -15,7 +15,6 @@ from adafruit_midi.note_off import NoteOff
 from adafruit_midi.note_on import NoteOn
 from adafruit_midi.midi_message import MIDIUnknownEvent
 
-
 from config import *
 from src.display import Display
 from src.keygrid import KeyGrid
@@ -38,7 +37,7 @@ i2c_bus = busio.I2C(board.SCL, board.SDA)
 macropad = MacroPad()
 display = Display()
 keygrid = KeyGrid(macropad, display, midi)
-launchgrid = LaunchGrid(i2c_bus, keygrid.macropad, midi)
+launchgrid = LaunchGrid(i2c_bus, midi)
 faders = Faders(i2c_bus, display, midi)
 
 num = 1

@@ -18,7 +18,7 @@ C_OFF = LP_COLORS[0]
 
 
 class LaunchGrid:
-    def __init__(self, i2c_bus, macropad, midi):
+    def __init__(self, i2c_bus, midi):
         # create the i2c object for the trellis
         trelli = [
             [NeoTrellis(i2c_bus, False, addr=TRELLIS_ADDR[0][0]),NeoTrellis(i2c_bus, False, addr=TRELLIS_ADDR[0][1])],
@@ -26,7 +26,6 @@ class LaunchGrid:
         ]
         self.trelli = trelli
         self.trellis = MultiTrellis(self.trelli)
-        self.macropad = macropad
         self.midi = midi
         self.init_trellis()
 

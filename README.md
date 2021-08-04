@@ -3,6 +3,9 @@
 This project creates an 8x8 MIDI Launch Grid with a 3x4 Key Grid, OLED 
 Display, Faders and an Endless Encoder.
 
+This project is inspired by the [Adabox 019 "Ableton Live Launcher"](https://learn.adafruit.com/ableton-live-macropad-launcher/overview) 
+project by [John Park](https://learn.adafruit.com/users/johnpark)
+
 ## Library Requirements
 
 Install the following libraries in your `/lib` folder
