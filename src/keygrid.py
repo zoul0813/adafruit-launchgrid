@@ -54,36 +54,10 @@ class KeyGrid:
 
         num = key_event.key_number
 
-        print("Macropad", num, key_event.pressed, key_event.released)
-        if num == 0:
-            if key_event.pressed:
-                self.midi.send(ControlChange(CC_STOP, 127))
-            print("sent Stop", num)
-        elif num == 1:
-            if key_event.pressed:
-                self.midi.send(ControlChange(CC_PLAY, 127))
-            print("sent Start", num)
-        elif num == 2:
-            if key_event.pressed:
-                self.midi.send(ControlChange(CC_REC, 127))
-            print("sent Record", num)
-        elif num == 3:
-            if key_event.pressed:
-                self.midi.send(ControlChange(CC_RWD, 127))
-            if key_event.pressed:
-                self.midi.send(ControlChange(CC_RWD, 0))
-            print("sent Rewind", num)
-        elif num == 4:
-            if key_event.pressed:
-                self.midi.send(ControlChange(CC_LOOP, 127))
-            # elif key_event.released:
-            #    self.midi.send(ControlChange(CC_LOOP, 0))
-            print("sent LOOP", num)
-        elif num == 3:
-            if key_event.pressed:
-                self.midi.send(ControlChange(CC_FWD, 127))
-            # elif key_event.released:
-            #    self.midi.send(ControlChange(CC_FWD, 0))
-            print("sent Forward", num)
+        #print("Macropad", num, key_event.pressed, key_event.released)
+        key_cc = KEY_CCS[num]
+        if key_event.pressed:
+            self.midi.send(ControlChange(key_cc, 127))
+            print("KeyGrid", num, "sent", key_cc)
 
         self.macropad.pixels.show()
