@@ -35,35 +35,58 @@ class adafruit_launchgrid(ControlSurface):
 		global mixer
 		self.mixer.channel_strip(0).set_pan_control(EncoderElement(MIDI_CC_TYPE, 0, 76, _map_modes.absolute))
 		self.mixer.channel_strip(0).set_volume_control(EncoderElement(MIDI_CC_TYPE, 0, 75, _map_modes.absolute))
+
 		arm_specific_0 = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 99)
 		self.mixer.channel_strip(0).set_arm_button(arm_specific_0)
+
 		mute_specific_0 = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 101)
 		self.mixer.channel_strip(0).set_mute_button(mute_specific_0)
 		self.mixer.channel_strip(0).set_invert_mute_feedback(True)
+
 		solo_specific_0 = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 100)
 		self.mixer.channel_strip(0).set_solo_button(solo_specific_0)
+
 		# transport
 		global transport
 		self.transport = TransportComponent()
 		self.transport.name = 'Transport'
+
 		seek_backward_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 93)
 		seek_backward_button.name = 'seek_backward_button'
 		self.transport.set_seek_backward_button(seek_backward_button)
+
 		seek_forward_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 95)
 		seek_forward_button.name = 'seek_forward_button'
 		self.transport.set_seek_forward_button(seek_forward_button)
+
 		record_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 90)
 		record_button.name = 'record_button'
 		self.transport.set_record_button(record_button)
+
 		loop_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 94)
 		loop_button.name = 'loop_button'
 		self.transport.set_loop_button(loop_button)
+
 		play_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 92)
 		play_button.name = 'play_button'
 		self.transport.set_play_button(play_button)
+
 		stop_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 91)
 		stop_button.name = 'stop_button'
 		self.transport.set_stop_button(stop_button)
+
+		metronome_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 98)
+		metronome_button.name = 'metronome_button'
+		self.transport.set_metronome_button(metronome_button)
+		
+		punchin_button = ConfigurableButtonElement(1, MIDI_CC_TYPE, 0, 97)
+		punchin_button.text = 'punchin_button'
+		self.transport.set_punch_in_button(punchin_button)
+
+		punchout_button = ConfigurableButtonElement(1, MIDI_CC_TYPE, 0, 96)
+		punchout_button.text = 'punchout_button'
+		self.transport.set_punch_out_button(punchout_button)
+		
 
 	def _remove_mode1(self):
 		# mixer

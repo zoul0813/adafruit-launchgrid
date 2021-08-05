@@ -75,6 +75,14 @@ KEY_CCS = [
     99,100,101
 ]
 
+# Should the keys send 0 velocity values?
+KEY_TOGGLES = [
+    0, 0, 0,
+    0, 0, 0,
+    1, 1, 0,
+    0, 0, 0
+]
+
 MODIFIER_NOTES = [41, 42, 43, 41, 42, 43, 41, 42, 43, 41, 42, 43]  # blank row in Live
 
 # MacroPad Display Settings

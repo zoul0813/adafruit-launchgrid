@@ -56,8 +56,12 @@ class KeyGrid:
 
         #print("Macropad", num, key_event.pressed, key_event.released)
         key_cc = KEY_CCS[num]
+        key_toggle = KEY_TOGGLES[num]
         if key_event.pressed:
             self.midi.send(ControlChange(key_cc, 127))
-            print("KeyGrid", num, "sent", key_cc)
+            print("KeyGrid", num, "sent", key_cc, "press")
 
+        if key_toggle and key_event.released:
+            self.midi.send(ControlChange(key_cc, 0))
+            print("KeyGrid", num, "sent", key_cc, "release")
         self.macropad.pixels.show()
