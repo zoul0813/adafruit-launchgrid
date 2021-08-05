@@ -43,8 +43,9 @@ keys, and various other small parts.
 
 ## Setup
 
-[MIDI Mapping Tutorial](https://remotify.io/tutorials/midi-mapping-ableton-live)
-[Installing Remote Script](https://remotify.io/install-midi-remote-scripts-ableton)
+### Resources
+* [MIDI Mapping Tutorial](https://remotify.io/tutorials/midi-mapping-ableton-live)
+* [Installing Remote Script](https://remotify.io/install-midi-remote-scripts-ableton)
 
 In the remote_script folder you will find a `live10` and `live11` version of the
 `adafruit_launchgrid` remote script.  These scripts were created intiially using
