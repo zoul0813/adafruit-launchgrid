@@ -40,3 +40,8 @@ keys, and various other small parts.
 
 
 ** This project is not affiliated with or endorsed by [Adafruit](https://www.adafruit.com) **
+
+## Setup
+
+[MIDI Mapping Tutorial](https://remotify.io/tutorials/midi-mapping-ableton-live)
+[Installing Remote Script](https://remotify.io/install-midi-remote-scripts-ableton)
