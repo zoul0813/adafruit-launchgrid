@@ -83,6 +83,13 @@ KEY_TOGGLES = [
     0, 0, 0
 ]
 
+KEY_COLORS = [
+    LP_COLORS[5], LP_COLORS[64], LP_COLORS[87],
+    0, LP_COLORS[97], 0,
+    LP_COLORS[56], LP_COLORS[56], LP_COLORS[112],
+    LP_COLORS[5], LP_COLORS[13], LP_COLORS[79]
+]
+
 MODIFIER_NOTES = [41, 42, 43, 41, 42, 43, 41, 42, 43, 41, 42, 43]  # blank row in Live
 
 # MacroPad Display Settings

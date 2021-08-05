@@ -21,6 +21,8 @@ class KeyGrid:
     def init_keygrid(self):
         print("KeyGrid::init")
         self.set_brightness(BRIGHT)
+        for i in range(0, 12):
+            self.macropad.pixels[i] = KEY_COLORS[i]
 
     def sync(self):
         key_event = self.macropad.keys.events.get()  # check for keypad events
