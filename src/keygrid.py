@@ -30,10 +30,16 @@ class KeyGrid:
         if not key_event:  # Event is None; no keypad event happened, do other stuff
             position = self.macropad.encoder  # store encoder position state
             # lock to cc range
-            cc_position = int(constrain((position + CC_OFFSET), 0, 127))
+            cc_position = int(constrain((position + ENCODER_DEFAULT), 0, 127))
 
             if self.last_position is None or position != self.last_position:
                 if position != self.last_position:
+                    if position > self.last_position:
+                        self.midi.send(ControlChange(ENCODER_RIGHT_CC, 127))
+                        print("Encoder", "right", ENCODER_RIGHT_CC)
+                    elif position < self.last_position:
+                        self.midi.send(ControlChange(ENCODER_LEFT_CC, 127))
+                        print("Encoder", "left", ENCODER_RIGHT_CC)
                     self.midi.send(ControlChange(ENCODER_CC_NUMBER, cc_position))
                     print("Encoder: %2d" % (cc_position), ENCODER_CC_NUMBER, cc_position)
                     self.display.set_encoder_display(0, cc_position)

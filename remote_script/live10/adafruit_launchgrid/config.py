@@ -1,3 +1,9 @@
+ENCODER_CC_NUMBER = 74  # CC number to send w encoder
+ENCODER_LEFT_CC = 73
+ENCODER_RIGHT_CC = 75
+ENCODER_TEXT = "Encode"  # change for intended CC name
+ENCODER_DEFAULT = 0  # Initial default value of encoder
+
 GRID_NOTES = (
     (81, 82, 83, 84, 85, 86, 87, 88),  # 1
     (71, 72, 73, 74, 75, 76, 77, 78),  # 2

@@ -38,7 +38,7 @@ class Display:
             FONT, text=ENCODER_TEXT, color=0xffffff, x=WIDTH - 42, y=y4)
         screen.append(cc_label_text_area)
         # --- cc value display
-        cc_val_text = str(CC_OFFSET)
+        cc_val_text = str(ENCODER_DEFAULT)
         cc_val_text_area = label.Label(
             FONT, text=cc_val_text, color=0xffffff, x=WIDTH - 20, y=y5)
         screen.append(cc_val_text_area)

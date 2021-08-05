@@ -1,9 +1,11 @@
 TITLE_TEXT = "Live Launcher 2040"
 TRACK_NAMES = ["DRUM", "BASS", "SYNTH"]  # Customize these
-CC_OFFSET = 20  # Initial default value of encoder
 
 ENCODER_CC_NUMBER = 74  # CC number to send w encoder
+ENCODER_LEFT_CC = 73
+ENCODER_RIGHT_CC = 75
 ENCODER_TEXT = "Encode"  # change for intended CC name
+ENCODER_DEFAULT = 0  # Initial default value of encoder
 
 FADER_COUNT = 1
 FADERS = (

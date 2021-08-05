@@ -6,6 +6,7 @@ from _Framework.DeviceComponent import DeviceComponent
 from _Framework.MixerComponent import MixerComponent
 from _Framework.SliderElement import SliderElement
 from _Framework.TransportComponent import TransportComponent
+from _Framework.ChannelStripComponent import ChannelStripComponent
 from _Framework.InputControlElement import *
 from _Framework.ButtonElement import ButtonElement
 from _Framework.ButtonMatrixElement import ButtonMatrixElement
@@ -87,15 +88,19 @@ class adafruit_launchgrid(ControlSurface):
             EncoderElement(MIDI_CC_TYPE, 0, 75, _map_modes.absolute))
 
         # key row 4
-        arm_specific_0 = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 99)
-        self.mixer.channel_strip(0).set_arm_button(arm_specific_0)
+        arm_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 99)
+        #self.mixer.channel_strip(0).set_arm_button(arm_specific_0)
 
-        mute_specific_0 = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 101)
-        self.mixer.channel_strip(0).set_mute_button(mute_specific_0)
-        self.mixer.channel_strip(0).set_invert_mute_feedback(True)
+        mute_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 101)
+        #self.mixer.channel_strip(0).set_mute_button(mute_specific_0)
+        #self.mixer.channel_strip(0).set_invert_mute_feedback(True)
 
-        solo_specific_0 = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 100)
-        self.mixer.channel_strip(0).set_solo_button(solo_specific_0)
+        solo_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, 100)
+        #self.mixer.channel_strip(0).set_solo_button(solo_specific_0)
+
+        track_left_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, ENCODER_LEFT_CC)
+        track_right_button = ConfigurableButtonElement(0, MIDI_CC_TYPE, 0, ENCODER_RIGHT_CC)
+        self.mixer.set_select_buttons(track_right_button, track_left_button)
 
         # session
 
@@ -134,6 +139,9 @@ class adafruit_launchgrid(ControlSurface):
                 clip_slot.name = str(track_index) + \
                     '_Clip_Slot_' + str(scene_index)
                 clip_slot.set_launch_button(button)
+
+    def on_arm_button(self):
+        self.mixer.selected_strip
 
     def _remove_mode1(self):
         # mixer
